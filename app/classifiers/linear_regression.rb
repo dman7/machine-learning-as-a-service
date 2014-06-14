@@ -15,6 +15,12 @@ class LinearRegression
   # of size two, where the first element is the input variable, and the second
   # element is the output variable.
   def initialize(data)
+    raise ArgumentError, "Training set can't be empty" if data.blank?
+
+    if data.find {|point_array| point_array.count != 2}
+      raise ArgumentError, "Training set must consist of one input and one output variable"
+    end
+
     @data = data
   end
 
@@ -54,8 +60,6 @@ class LinearRegression
   end
 
   def slope
-    return nil if @data.blank?
-
     input_mean  = LinearRegression.mean(input_variables)
     output_mean = LinearRegression.mean(output_variables)
 
