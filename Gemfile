@@ -59,3 +59,12 @@ group :test do
 end
 
 #------------------------------------------------------------------------------
+# Background processing
+
+gem "sidekiq"
+
+# This allows us to control Sidekiq through a web panel.
+gem "slim"
+gem "sinatra", ">= 1.3.0", :require => nil
+
+#------------------------------------------------------------------------------
