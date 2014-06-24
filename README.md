@@ -11,6 +11,15 @@ I want the client to see
 * how I architect my code,
 * my understanding of web development, and best practices.
 
+I use the following toolset:
+
+* Ruby on Rails framework,
+* PostgreSQL database,
+* Sidekiq background processing,
+* Twitter Bootstrap HTML/CSS framework,
+* RSpec and Capybara testing,
+* Heroku hosting.
+
 The client and the idea are something I made up for demonstration purposes.
 
 
@@ -25,6 +34,7 @@ The client is looking for a proof-of-concept, also known as an Minimum Viable Pr
 
 ## Solution
 On a high-level, my solution is as follows:
+
 1. Write code to define a classification algorithm. Since this is an MVP, one is enough.
 A simple linear regression algorithm will do.
 2. Design and build out the API that
