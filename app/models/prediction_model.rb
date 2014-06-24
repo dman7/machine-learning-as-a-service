@@ -1,14 +1,13 @@
-class TrainingDataSet < ActiveRecord::Base
+class PredictionModel < ActiveRecord::Base
+  #----------------------------------------------------------------------------
+
+  validates :algorithm_id,         :presence => true
+  validates :training_data_set_id, :presence => true
 
   #----------------------------------------------------------------------------
 
-  belongs_to :developer
-  has_many   :prediction_models
-
-  #----------------------------------------------------------------------------
-
-  validates :developer_id, :presence => true
-  validates :raw_content,  :presence => true
+  belongs_to :algorithm
+  belongs_to :training_data_set
 
   #----------------------------------------------------------------------------
 
